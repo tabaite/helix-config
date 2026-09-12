@@ -15,3 +15,15 @@ language-servers = [ "shader-language-server" ]
 [[grammar]]
 name = "hlsl"
 source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-hlsl", rev = "bab9111922d53d43668fabb61869bec51bbcb915" }
+
+[[language]]
+name = "batch"
+scope = "source.bat"
+injection-regex = "batch"
+file-types = [ "bat" ]
+comment-tokens = "::"
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "batch"
+source = { git = "https://github.com/wharflab/tree-sitter-batch", rev = "2aa22f00d7f5bbe58556b8eef0b1fc1629508603" }
