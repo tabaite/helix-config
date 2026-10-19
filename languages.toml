@@ -3,6 +3,16 @@ command = "shader-language-server"
 args = [ "--stdio", "--hlsl" ]
 
 [[language]]
+name = "c"
+scope = "source.c"
+injection-regex = "c"
+file-types = ["c"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "clangd" ]
+indent = { tab-width = 8, unit = "        " } # kernel style :)
+
+[[language]]
 name = "hlsl"
 scope = "source.hlsl"
 injection-regex = "hlsl"
